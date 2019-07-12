@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+        integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="menu">
+        <h1>Cinder <i class="fas fa-burn"></i></h1>
+        <ul>
+            <li>Matches: <span id="remaining">0</span></li>
+            <li class="link profile-link">Profile</li>
+        </ul>
+    </div>
+    <div class="left">
+        <div class="card">
+            <div class="content">
+                <div class="front">
+                    <img class="current-img" src="https://source.unsplash.com/user/bonteque/294x444"
+                        alt="profiile pic" />
+                </div>
+                <div class="back">
+                    <h2 class="name"></h2>
+                    <p class="age"></p>
+                    <p class="bio"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="center">
+            <p>Look. <span class="highlight">Flip.</span> Read. Rate. </p>
+            <button class="rate-btn" value="0">Yes!</button>
+            <button class="rate-btn" value="1">Nope</button>
+        </div>
+    </div>
+
+    <!--PROFILE-->
+    <div id="modal">
+        <button class="exit"> Save & View Matches</button>
+        <h1>Profile</h1>
+
+        <div class="row">
+                <div class="small-6 small-centered columns" style="padding-top: 4rem;">
+                    <fieldset>
+                        <h3>Hiking</h3>
+                        <div class="rating-container">
+                            <div class="rating left">Strongly Dislike</div>
+                            <div class="rating right">Strongly Like</div>
+                        </div>
+                        <div><input checked="checked" id="radio1" name="hiking" type="radio" value="1"><label
+                                for="radio1">1</label></div>
+                        <div><input id="radio2" name="hiking" type="radio" value="2"><label for="radio2">2</label>
+                        </div>
+                        <div><input id="radio3" name="hiking" type="radio" value="3"><label for="radio3">3</label>
+                        </div>
+                        <div><input id="radio4" name="hiking" type="radio" value="4"><label for="radio4">4</label>
+                        </div>
+                        <div><input id="radio5" name="hiking" type="radio" value="5"><label for="radio5">5</label>
+                        </div>
+                    </fieldset>                   
+                </div>
+            </div>
+
+            <div class="row">
+                    <div class="small-6 small-centered columns" style="padding-top: 4rem;">
+                        <fieldset>
+                            <h3>Dancing</h3>
+                            <div class="rating-container">
+                                <div class="rating left">Strongly Dislike</div>
+                                <div class="rating right">Strongly Like</div>
+                            </div>
+                            <div><input checked="checked" id="radio1" name="dancing" type="radio" value="1"><label
+                                    for="radio1">1</label></div>
+                            <div><input id="radio2" name="dancing" type="radio" value="2"><label for="radio2">2</label>
+                            </div>
+                            <div><input id="radio3" name="dancing" type="radio" value="3"><label for="radio3">3</label>
+                            </div>
+                            <div><input id="radio4" name="dancing" type="radio" value="4"><label for="radio4">4</label>
+                            </div>
+                            <div><input id="radio5" name="dancing" type="radio" value="5"><label for="radio5">5</label>
+                            </div>
+                        </fieldset>                   
+                    </div>
+                </div>
+
+
+                <div class="row">
+                        <div class="small-6 small-centered columns" style="padding-top: 4rem;">
+                            <fieldset>
+                                <h3>Sports</h3>
+                                <div class="rating-container">
+                                    <div class="rating left">Strongly Dislike</div>
+                                    <div class="rating right">Strongly Like</div>
+                                </div>
+                                <div><input checked="checked" id="radio1" name="sports" type="radio" value="1"><label
+                                        for="radio1">1</label></div>
+                                <div><input id="radio2" name="sports" type="radio" value="2"><label for="radio2">2</label>
+                                </div>
+                                <div><input id="radio3" name="sports" type="radio" value="3"><label for="radio3">3</label>
+                                </div>
+                                <div><input id="radio4" name="sports" type="radio" value="4"><label for="radio4">4</label>
+                                </div>
+                                <div><input id="radio5" name="sports" type="radio" value="5"><label for="radio5">5</label>
+                                </div>
+                            </fieldset>                   
+                        </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="small-6 small-centered columns" style="padding-top: 4rem;">
+                                <fieldset>
+                                    <h3>Reading</h3>
+                                    <div class="rating-container">
+                                        <div class="rating left">Strongly Dislike</div>
+                                        <div class="rating right">Strongly Like</div>
+                                    </div>
+                                    <div><input checked="checked" id="radio1" name="reading" type="radio" value="1"><label
+                                            for="radio1">1</label></div>
+                                    <div><input id="radio2" name="reading" type="radio" value="2"><label for="radio2">2</label>
+                                    </div>
+                                    <div><input id="radio3" name="reading" type="radio" value="3"><label for="radio3">3</label>
+                                    </div>
+                                    <div><input id="radio4" name="reading" type="radio" value="4"><label for="radio4">4</label>
+                                    </div>
+                                    <div><input id="radio5" name="reading" type="radio" value="5"><label for="radio5">5</label>
+                                    </div>
+                                </fieldset>                   
+                            </div>
+                        </div>
+
+                        <div class="row">
+                                <div class="small-6 small-centered columns" style="padding-top: 4rem;">
+                                    <fieldset>
+                                        <h3>Quiet Nights at Home</h3>
+                                        <div class="rating-container">
+                                            <div class="rating left">Strongly Dislike</div>
+                                            <div class="rating right">Strongly Like</div>
+                                        </div>
+                                        <div><input checked="checked" id="radio1" name="quietNight" type="radio" value="1"><label
+                                                for="radio1">1</label></div>
+                                        <div><input id="radio2" name="quietNight" type="radio" value="2"><label for="radio2">2</label>
+                                        </div>
+                                        <div><input id="radio3" name="quietNight" type="radio" value="3"><label for="radio3">3</label>
+                                        </div>
+                                        <div><input id="radio4" name="quietNight" type="radio" value="4"><label for="radio4">4</label>
+                                        </div>
+                                        <div><input id="radio5" name="quietNight" type="radio" value="5"><label for="radio5">5</label>
+                                        </div>
+                                    </fieldset>                   
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                    <div class="small-6 small-centered columns" style="padding-top: 4rem;">
+                                        <fieldset>
+                                            <h3>Fine Dining</h3>
+                                            <div class="rating-container">
+                                                <div class="rating left">Strongly Dislike</div>
+                                                <div class="rating right">Strongly Like</div>
+                                            </div>
+                                            <div><input checked="checked" id="radio1" name="dining" type="radio" value="1"><label
+                                                    for="radio1">1</label></div>
+                                            <div><input id="radio2" name="dining" type="radio" value="2"><label for="radio2">2</label>
+                                            </div>
+                                            <div><input id="radio3" name="dining" type="radio" value="3"><label for="radio3">3</label>
+                                            </div>
+                                            <div><input id="radio4" name="dining" type="radio" value="4"><label for="radio4">4</label>
+                                            </div>
+                                            <div><input id="radio5" name="dining" type="radio" value="5"><label for="radio5">5</label>
+                                            </div>
+                                        </fieldset>                   
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                        <div class="small-6 small-centered columns" style="padding-top: 4rem;">
+                                            <fieldset>
+                                                <h3>Philosophical Debates</h3>
+                                                <div class="rating-container">
+                                                    <div class="rating left">Strongly Dislike</div>
+                                                    <div class="rating right">Strongly Like</div>
+                                                </div>
+                                                <div><input checked="checked" id="radio1" name="debate" type="radio" value="1"><label
+                                                        for="radio1">1</label></div>
+                                                <div><input id="radio2" name="debate" type="radio" value="2"><label for="radio2">2</label>
+                                                </div>
+                                                <div><input id="radio3" name="debate" type="radio" value="3"><label for="radio3">3</label>
+                                                </div>
+                                                <div><input id="radio4" name="debate" type="radio" value="4"><label for="radio4">4</label>
+                                                </div>
+                                                <div><input id="radio5" name="debate" type="radio" value="5"><label for="radio5">5</label>
+                                                </div>
+                                            </fieldset>                   
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                            <div class="small-6 small-centered columns" style="padding-top: 4rem;">
+                                                <fieldset>
+                                                    <h3>Night Clubs</h3>
+                                                    <div class="rating-container">
+                                                        <div class="rating left">Strongly Dislike</div>
+                                                        <div class="rating right">Strongly Like</div>
+                                                    </div>
+                                                    <div><input checked="checked" id="radio1" name="club" type="radio" value="1"><label
+                                                            for="radio1">1</label></div>
+                                                    <div><input id="radio2" name="club" type="radio" value="2"><label for="radio2">2</label>
+                                                    </div>
+                                                    <div><input id="radio3" name="club" type="radio" value="3"><label for="radio3">3</label>
+                                                    </div>
+                                                    <div><input id="radio4" name="club" type="radio" value="4"><label for="radio4">4</label>
+                                                    </div>
+                                                    <div><input id="radio5" name="club" type="radio" value="5"><label for="radio5">5</label>
+                                                    </div>
+                                                </fieldset>                   
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="small-6 small-centered columns" style="padding-top: 4rem;">
+                                                    <fieldset>
+                                                        <h3>Politics</h3>
+                                                        <div class="rating-container">
+                                                            <div class="rating left">Strongly Dislike</div>
+                                                            <div class="rating right">Strongly Like</div>
+                                                        </div>
+                                                        <div><input checked="checked" id="radio1" name="politics" type="radio" value="1"><label
+                                                                for="radio1">1</label></div>
+                                                        <div><input id="radio2" name="politics" type="radio" value="2"><label for="radio2">2</label>
+                                                        </div>
+                                                        <div><input id="radio3" name="politics" type="radio" value="3"><label for="radio3">3</label>
+                                                        </div>
+                                                        <div><input id="radio4" name="politics" type="radio" value="4"><label for="radio4">4</label>
+                                                        </div>
+                                                        <div><input id="radio5" name="politics" type="radio" value="5"><label for="radio5">5</label>
+                                                        </div>
+                                                    </fieldset>                   
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                    <div class="small-6 small-centered columns" style="padding-top: 4rem;">
+                                                        <fieldset>
+                                                            <h3>Beach Days</h3>
+                                                            <div class="rating-container">
+                                                                <div class="rating left">Strongly Dislike</div>
+                                                                <div class="rating right">Strongly Like</div>
+                                                            </div>
+                                                            <div><input checked="checked" id="radio1" name="beach" type="radio" value="1"><label
+                                                                    for="radio1">1</label></div>
+                                                            <div><input id="radio2" name="beach" type="radio" value="2"><label for="radio2">2</label>
+                                                            </div>
+                                                            <div><input id="radio3" name="beach" type="radio" value="3"><label for="radio3">3</label>
+                                                            </div>
+                                                            <div><input id="radio4" name="beach" type="radio" value="4"><label for="radio4">4</label>
+                                                            </div>
+                                                            <div><input id="radio5" name="beach" type="radio" value="5"><label for="radio5">5</label>
+                                                            </div>
+                                                        </fieldset>                   
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="small-6 small-centered columns" style="padding-top: 4rem;">
+                                                            <fieldset>
+                                                                <h3>Large Parties</h3>
+                                                                <div class="rating-container">
+                                                                    <div class="rating left">Strongly Dislike</div>
+                                                                    <div class="rating right">Strongly Like</div>
+                                                                </div>
+                                                                <div><input checked="checked" id="radio1" name="parties" type="radio" value="1"><label
+                                                                        for="radio1">1</label></div>
+                                                                <div><input id="radio2" name="parties" type="radio" value="2"><label for="radio2">2</label>
+                                                                </div>
+                                                                <div><input id="radio3" name="parties" type="radio" value="3"><label for="radio3">3</label>
+                                                                </div>
+                                                                <div><input id="radio4" name="parties" type="radio" value="4"><label for="radio4">4</label>
+                                                                </div>
+                                                                <div><input id="radio5" name="parties" type="radio" value="5"><label for="radio5">5</label>
+                                                                </div>
+                                                            </fieldset>                   
+                                                        </div>
+                                                    </div>
+
+    </div>
+
+    <script type="text/javascript" src="app2.js"></script>
+</body>
+
+</html>

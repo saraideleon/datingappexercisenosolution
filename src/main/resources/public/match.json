@@ -1,0 +1,22 @@
+[
+	{
+		"name": "Sam",
+		"age": 25,
+		"bio": "I am sam"
+	},
+	{
+		"name": "Pam",
+		"age": 25,
+		"bio": "I am pam"
+	},
+	{
+		"name": "Tam",
+		"age": 25,
+		"bio": "I am tam"
+	},
+	{
+		"name": "Jam",
+		"age": 25,
+		"bio": "I am jam"
+	}
+]
